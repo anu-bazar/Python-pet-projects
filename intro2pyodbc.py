@@ -1,7 +1,5 @@
-######################connect to server with pyodbc
-# enter login details here
 import pyodbc
-
+# IMPORTANT: insert credentials here!!!
 class SQL:
     def __init__(self, server, database, username, password):
         self.server = server
@@ -41,7 +39,7 @@ cursor = cnxn.cursor()
 # disconnecting
 sql.disconnect()
 
-###############################SQL query on languages
+#SQL query on languages
 
 try:
     # establish connection and cursor
@@ -66,7 +64,7 @@ finally:
     cursor.close()
     sql_conn.close()
 
-##########################3Add a new country 
+#Add a new country 
 #assumes connection is valid
 
 new_country = 'Mongolia'
