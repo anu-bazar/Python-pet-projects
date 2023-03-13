@@ -53,3 +53,7 @@ def reverse_complement(sequence: str) -> str:
     reverse_seq = sequence[::-1]
     reverse_complement = "".join(complement.get(base, base) for base in reverse_seq)
     return reverse_complement
+#Hamming distance
+def hamm(str1: str, str2: str) -> int:
+    return sum(s1 != s2 for s1, s2 in zip(str1, str2))
+
