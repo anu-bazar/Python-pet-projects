@@ -47,3 +47,9 @@ def frequent_words(text: str, k: int) -> list:
             frequent_patterns.append(pattern)
     return frequent_patterns
 
+#Reverse compliment
+def reverse_complement(sequence: str) -> str:
+    complement = {"A": "T", "C": "G", "G": "C", "T": "A"}
+    reverse_seq = sequence[::-1]
+    reverse_complement = "".join(complement.get(base, base) for base in reverse_seq)
+    return reverse_complement
